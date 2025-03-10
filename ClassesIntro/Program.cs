@@ -1,6 +1,8 @@
 ﻿
 Airplane plane = new Airplane("Bucky", 10000, 0);
 
+
+
 // Console.WriteLine($"\nName: {plane.GetName()}\n");
 Console.WriteLine($"\nName: {plane.Name}\n");
 
