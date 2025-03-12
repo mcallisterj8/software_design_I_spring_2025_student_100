@@ -9,9 +9,9 @@ Console.WriteLine("\n\n");
 // planeOne.Drive();
 
 
-ElectricCar carOne = new ElectricCar("jkl123", 8);
+ElectricCar carOne = new ElectricCar("jkl123", 8, 100);
 
-Console.WriteLine($"carOne license plate: {carOne.LicensePlate} | electric: {carOne.IsElectric}");
+Console.WriteLine($"carOne license plate: {carOne.LicensePlate}");
 carOne.Drive();
 
 Console.WriteLine($"carOne: {carOne}");
