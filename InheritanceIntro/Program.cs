@@ -1,7 +1,5 @@
 ﻿// Vehicle vehicleOne = new Vehicle();
 
-
-
 Console.WriteLine("\n\n");
 
 // Airplane planeOne = new Airplane();
