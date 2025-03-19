@@ -13,9 +13,13 @@ string fileContents = File.ReadAllText(filePath);
 /**************************************
     WRITING TO TEXT FILE
 **************************************/
-string pathToFile = "./hello.txt";
+string pathToFile = $"{Directory.GetCurrentDirectory()}/hello.txt";
 string content = "Hello, World!";
 File.WriteAllText(pathToFile, content);
+
+// Console.WriteLine("\n\n");
+// Console.WriteLine($"{Directory.GetCurrentDirectory()}");
+// Console.WriteLine("\n\n");
 
 string moreContent = "\nThe sun is out!";
 File.AppendAllText(pathToFile, moreContent);
@@ -28,7 +32,7 @@ string title = "Example Title";
 int number = 80;
 
 string formatContent = 
-@$"{title}
+        @$"{title}
 =================
 Non-indented sentence.
     Indented sentence with the number {number}!";
@@ -49,9 +53,23 @@ Company? companyA
 Employee singleEmployee = companyA.Employees[0];
 
 Console.WriteLine("\n");
-Console.WriteLine($"Company:\n\n{JsonSerializer.Serialize(companyA)}");
+Console.WriteLine($"Single Employee BEFORE:\n\n{singleEmployee.FullName} | Position: {singleEmployee.Position.Description}");
 Console.WriteLine("\n");
 
+singleEmployee.Position.Description = "Software Engineer";
+
+Console.WriteLine("\n");
+Console.WriteLine($"Single Employee AFTER:\n\n{singleEmployee.FullName} | Position: {singleEmployee.Position.Description}");
+Console.WriteLine("\n");
+
+// Options to format the JSON file
+var options = new JsonSerializerOptions { WriteIndented = true };
+
+// Serialize / stringify the company object back to JSON
+string updatedJson = JsonSerializer.Serialize(companyA, options);
+
+// Write the JSON back out to the file
+File.WriteAllText(jsonFilePath, updatedJson);
 
 
 
