@@ -8,6 +8,6 @@ public class Employee {
     public decimal AnnualSalary { get; set; }
     [JsonPropertyName("position")]
     public Position Position { get; set; }
-    [JsonPropertyName("Benefits")]
+    [JsonPropertyName("benefits")]
     public List<Benefit> Benefits { get; set; } = new List<Benefit>();
 }
