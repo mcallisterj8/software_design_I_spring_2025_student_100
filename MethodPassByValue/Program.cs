@@ -9,6 +9,7 @@ Console.WriteLine($"secondHeight: {secondHeight}");
 Console.WriteLine("\n--------------------------------------------------");
 Console.WriteLine("int result = HouseChanger.AddMeasurements(firstHeight, secondHeight);");
 int result = HouseChanger.AddMeasurements(firstHeight, secondHeight);
+
 Console.WriteLine("--------------------------------------------------\n");
 
 Console.WriteLine($"result: {result}");
