@@ -1,4 +1,4 @@
-namespace GenericsExamples.Models;
+
 
 public class Android : Phone {
     public static string Browser { get; } = "Chrome";
