@@ -15,17 +15,17 @@ public class Toolbox {
         return output;
     }
 
-    public string? FindTool(string toolName) {
+    public string? FindTool(string toolName) {    
         return this.Tools.Find(tool => tool == toolName);
     }
 
     public T Echo<T>(T item) {
         Console.WriteLine($"Echoing: {item?.ToString()}");
-
         return item;
     }
 
     public SwapResult<T> Swap<T>(T a, T b) {
+        
         return new SwapResult<T> {
             First = b,
             Second = a

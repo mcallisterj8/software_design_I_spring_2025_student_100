@@ -8,3 +8,9 @@ Android androidB = new Android { Name = "elderberry" };
 Android androidC = new Android { Name = "kiwi" };
 
 Toolbox toolbox = new Toolbox { Name = "ToolboxA" };
+
+bool result = toolbox.ComparePhoneNames(iphoneD, iphoneA);
+
+Console.WriteLine("\n");
+Console.WriteLine($"result: {result}");
+Console.WriteLine("\n");
