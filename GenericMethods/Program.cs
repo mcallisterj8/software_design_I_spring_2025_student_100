@@ -1,4 +1,6 @@
-﻿iPhone iphoneA = new iPhone { Name = "apple" };
+﻿using GenericMethods.Models;
+
+iPhone iphoneA = new iPhone { Name = "apple" };
 iPhone iphoneB = new iPhone { Name = "berry" };
 iPhone iphoneC = new iPhone { Name = "cherry" };
 iPhone iphoneD = new iPhone { Name = "kiwi" };
